@@ -4,3 +4,23 @@ server:
 jwt:
   secret: M3cyb2k0dXJoZjM5NGdoZjM0OTdnOTQ4dHlyaDA0MjgzaGk4d3JlZ2Y4M3c0Z2Y4NzM0eXRvMzRodDk4aDgmRyomXkY3ZjNyODdnaWhkc2Y=
   lifetime: 36000000
+
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/errandDB
+    username: postgres
+    password: 32167
+  flyway:
+    enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL94Dialect
+
+logging:
+  level:
+    org.springframework.jdbc.core.JdbcTemplate: TRACE
